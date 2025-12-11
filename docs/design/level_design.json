@@ -1,0 +1,238 @@
+{
+  "version": "0.1.0",
+  "regions": [
+    {
+      "region_id": 1,
+      "name": "도시 재생 구역",
+      "theme": "대기 오염 + 플라스틱",
+      "unlock_condition": "default",
+      "stages": [
+        {
+          "stage_id": "1-1",
+          "name": "스모그 시티",
+          "pollution_types": ["air", "plastic"],
+          "difficulty": 1,
+          "objectives": {
+            "remove_pollution": 100,
+            "restore_trees": 5,
+            "survive_waves": 3
+          },
+          "rewards": {
+            "eco_points": 200,
+            "green_gems": 10
+          },
+          "tutorial": true
+        },
+        {
+          "stage_id": "1-10",
+          "name": "공장 지대 정화",
+          "pollution_types": ["air"],
+          "difficulty": 5,
+          "boss": {
+            "name": "스모그 타이탄",
+            "hp": 10000,
+            "mechanics": ["독성 구름 생성", "대기 오염 웨이브"]
+          },
+          "objectives": {
+            "remove_pollution": 500,
+            "defeat_boss": true
+          },
+          "rewards": {
+            "eco_points": 1000,
+            "green_gems": 50,
+            "impact_tokens": 5,
+            "first_clear": {
+              "cleaner": "air_specialist_rare"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "region_id": 2,
+      "name": "해양 복원 지역",
+      "theme": "해양 플라스틱 + 수질 오염",
+      "unlock_condition": "region_1_complete",
+      "brand_campaign_potential": "high",
+      "stages": [
+        {
+          "stage_id": "2-1",
+          "name": "플라스틱 해변",
+          "pollution_types": ["plastic", "water"],
+          "difficulty": 6,
+          "objectives": {
+            "remove_pollution": 300,
+            "rescue_sea_creatures": 10,
+            "survive_waves": 5
+          },
+          "rewards": {
+            "eco_points": 400,
+            "green_gems": 20
+          }
+        },
+        {
+          "stage_id": "2-15",
+          "name": "산호초 복원",
+          "pollution_types": ["plastic", "water"],
+          "difficulty": 12,
+          "boss": {
+            "name": "플라스틱 크라켄",
+            "hp": 30000,
+            "mechanics": ["플라스틱 촉수", "해양 쓰레기 생성", "수질 오염 파동"]
+          },
+          "objectives": {
+            "remove_pollution": 1000,
+            "restore_coral": 20,
+            "defeat_boss": true
+          },
+          "rewards": {
+            "eco_points": 2000,
+            "green_gems": 100,
+            "impact_tokens": 15,
+            "first_clear": {
+              "cleaner": "ocean_guardian_epic"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "region_id": 3,
+      "name": "숲 재건 구역",
+      "theme": "토양 오염 + 산림 파괴",
+      "unlock_condition": "region_2_complete",
+      "brand_campaign_potential": "high",
+      "stages": [
+        {
+          "stage_id": "3-10",
+          "name": "벌목 지대 복원",
+          "pollution_types": ["soil"],
+          "difficulty": 18,
+          "boss": {
+            "name": "독성 나무 정령",
+            "hp": 50000,
+            "mechanics": ["토양 오염 확산", "산성비 소환"]
+          },
+          "objectives": {
+            "remove_pollution": 1500,
+            "plant_trees": 100,
+            "defeat_boss": true
+          },
+          "rewards": {
+            "eco_points": 3000,
+            "green_gems": 150,
+            "impact_tokens": 25
+          }
+        }
+      ]
+    },
+    {
+      "region_id": 4,
+      "name": "핵 제염 구역",
+      "theme": "방사능 오염",
+      "unlock_condition": "region_3_complete",
+      "difficulty": "extreme",
+      "stages": [
+        {
+          "stage_id": "4-20",
+          "name": "체르노빌의 유령",
+          "pollution_types": ["nuclear"],
+          "difficulty": 30,
+          "boss": {
+            "name": "방사능 골렘",
+            "hp": 100000,
+            "mechanics": ["방사능 낙진", "핵 폭발", "오염 증식"]
+          },
+          "objectives": {
+            "remove_pollution": 3000,
+            "contain_radiation": true,
+            "defeat_boss": true
+          },
+          "rewards": {
+            "eco_points": 5000,
+            "green_gems": 300,
+            "impact_tokens": 50,
+            "first_clear": {
+              "cleaner": "radiation_expert_legendary"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "event_stages": {
+    "description": "브랜드 캠페인용 특별 스테이지",
+    "template": {
+      "duration": "limited_time",
+      "custom_branding": true,
+      "special_rewards": ["impact_tokens", "branded_items"],
+      "educational_content": "campaign-specific facts and tips"
+    },
+    "examples": [
+      {
+        "event_id": "earth_day_2026",
+        "name": "지구의 날 특별 정화 작전",
+        "duration_days": 7,
+        "stages": 5,
+        "global_goal": "전 세계 플레이어가 협력하여 1억 오염 제거",
+        "rewards": {
+          "participation": { "impact_tokens": 50 },
+          "global_success": { "all_players_green_gems": 200 }
+        }
+      }
+    ]
+  },
+  "puzzle_mechanics": {
+    "match3": {
+      "pollution_clusters": "3개 이상 매치하여 제거",
+      "combo_bonus": "연속 매치로 정화 효율 증가",
+      "special_tiles": ["폭탄(5매치)", "라인 클리어(4매치)", "색상 클리어(T/L매치)"]
+    },
+    "defense_waves": {
+      "wave_frequency": "30초마다",
+      "wave_intensity": "시간에 따라 증가",
+      "cleaner_abilities": "배치된 클리너가 자동으로 방어"
+    }
+  },
+  "difficulty_scaling": {
+    "pollution_hp_per_stage": 1.15,
+    "wave_intensity_per_stage": 1.10,
+    "reward_per_stage": 1.08,
+    "boss_hp_multiplier": 10
+  },
+  "restoration_system": {
+    "stages": [
+      {
+        "stage": 1,
+        "name": "오염 제거",
+        "requirement": "clear all pollution",
+        "visual": "bare land"
+      },
+      {
+        "stage": 2,
+        "name": "토양 복구",
+        "requirement": "apply restoration points",
+        "visual": "healthy soil"
+      },
+      {
+        "stage": 3,
+        "name": "식물 재생",
+        "requirement": "plant vegetation",
+        "visual": "grass and plants growing"
+      },
+      {
+        "stage": 4,
+        "name": "동물 귀환",
+        "requirement": "reach ecosystem threshold",
+        "visual": "animals appear"
+      },
+      {
+        "stage": 5,
+        "name": "생태계 완성",
+        "requirement": "perfect balance achieved",
+        "visual": "thriving ecosystem",
+        "bonus": "permanent eco point generation"
+      }
+    ]
+  }
+}

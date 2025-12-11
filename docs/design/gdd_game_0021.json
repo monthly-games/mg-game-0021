@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "game_id": "game_0021",
+    "code_name": "MG-0021",
+    "title_kr": "오염도 제로: 클리너 브리게이드",
+    "title_en": "Pollution Zero: Cleaner Brigade",
+    "version": "0.1.0",
+    "last_updated": "2026-03-01"
+  },
+  "overview": {
+    "genre_tags": ["puzzle", "defense", "eco", "casual"],
+    "target_audience": {
+      "age": "12-40",
+      "region": ["Global", "KR"],
+      "play_style": "casual"
+    },
+    "core_loop": "오염물을 제거하는 퍼즐을 풀고, 다가오는 오염 공격을 막으며 지구를 깨끗하게 복원한다",
+    "unique_selling_point": "환경 보호 테마와 게임플레이의 자연스러운 결합, 브랜드 콜라보 친화적 구조",
+    "year_2_role": "브랜드/콜라보 친화적 타이틀, ESG/브랜드 캠페인 연계 테스트"
+  },
+  "gameplay": {
+    "core_mechanics": [
+      {
+        "name": "오염 제거 퍼즐",
+        "description": "매치3 또는 연결 퍼즐로 오염물 제거"
+      },
+      {
+        "name": "디펜스 웨이브",
+        "description": "물결처럼 밀려오는 오염 공격을 막아내기"
+      },
+      {
+        "name": "지구 복원",
+        "description": "정화한 지역을 복원하여 자연 생태계 재건"
+      },
+      {
+        "name": "클리너 부대 관리",
+        "description": "다양한 능력을 가진 클리너 영웅 수집 및 배치"
+      },
+      {
+        "name": "캠페인 모드",
+        "description": "실제 환경 이슈를 테마로 한 캠페인 스테이지"
+      }
+    ],
+    "progression": {
+      "type": "region_based",
+      "description": "오염된 지역을 순차적으로 정화, 새로운 지역 해금"
+    },
+    "session_length": "5-15분"
+  },
+  "eco_theme": {
+    "pollution_types": [
+      {
+        "type": "plastic",
+        "name": "플라스틱 오염",
+        "color": "blue",
+        "real_world_issue": "해양 플라스틱"
+      },
+      {
+        "type": "air",
+        "name": "대기 오염",
+        "color": "gray",
+        "real_world_issue": "미세먼지, CO2"
+      },
+      {
+        "type": "water",
+        "name": "수질 오염",
+        "color": "brown",
+        "real_world_issue": "산업 폐수"
+      },
+      {
+        "type": "soil",
+        "name": "토양 오염",
+        "color": "dark_green",
+        "real_world_issue": "화학 비료, 농약"
+      },
+      {
+        "type": "nuclear",
+        "name": "방사능 오염",
+        "color": "green_glow",
+        "real_world_issue": "핵 폐기물"
+      }
+    ],
+    "restoration_stages": [
+      "오염 제거",
+      "토양 복구",
+      "식물 재생",
+      "동물 귀환",
+      "생태계 완성"
+    ],
+    "educational_elements": {
+      "pollution_facts": "각 스테이지에서 실제 환경 통계 제공",
+      "eco_tips": "일상에서 실천할 수 있는 환경 보호 팁",
+      "impact_tracker": "플레이어의 누적 정화량을 실제 환경 지표로 변환"
+    }
+  },
+  "brand_collaboration": {
+    "integration_points": [
+      {
+        "type": "themed_events",
+        "description": "브랜드별 특별 캠페인 이벤트",
+        "examples": ["재활용 캠페인", "해양 정화 이벤트", "나무 심기 프로젝트"]
+      },
+      {
+        "type": "branded_items",
+        "description": "브랜드 로고/제품이 들어간 게임 아이템",
+        "examples": ["에코백 수집품", "친환경 제품 버프 아이템"]
+      },
+      {
+        "type": "real_world_donation",
+        "description": "게임 내 활동을 실제 기부로 연계",
+        "mechanism": "특정 마일스톤 달성 시 파트너사가 실제 환경 단체에 기부"
+      },
+      {
+        "type": "co_branded_characters",
+        "description": "브랜드 마스코트를 클리너 영웅으로 추가"
+      }
+    ],
+    "esg_metrics": {
+      "player_impact": "플레이어별 환경 기여도 시각화",
+      "global_impact": "전체 플레이어의 누적 환경 영향력",
+      "campaign_tracking": "브랜드 캠페인 효과 측정"
+    }
+  },
+  "economy": {
+    "currencies": [
+      {
+        "name": "에코 포인트",
+        "type": "soft",
+        "sources": ["스테이지 클리어", "일일 미션", "재활용 보너스"],
+        "sinks": ["클리너 업그레이드", "정화 도구 구매"]
+      },
+      {
+        "name": "그린 젬",
+        "type": "hard",
+        "sources": ["인앱 구매", "이벤트", "업적"],
+        "sinks": ["프리미엄 클리너", "특별 이벤트 참여", "진행 가속"]
+      },
+      {
+        "name": "임팩트 토큰",
+        "type": "special",
+        "sources": ["브랜드 캠페인 참여", "실제 환경 활동 인증"],
+        "sinks": ["독점 보상", "실제 제품 교환권"]
+      }
+    ],
+    "monetization": {
+      "model": "F2P + IAP + Brand Partnerships",
+      "iap_items": ["그린 젬 패키지", "프리미엄 패스", "브랜드 콜라보 팩"],
+      "ad_placements": ["보상형 광고 (에코 포인트 2배)", "브랜드 영상 (임팩트 토큰)"],
+      "brand_revenue_share": "콜라보 이벤트 수익 일부를 환경 단체에 기부"
+    }
+  },
+  "technical": {
+    "platform": ["Android", "iOS", "Web"],
+    "engine": "Flutter + Flame",
+    "backend": "Firebase + Campaign Management System",
+    "analytics": "GA4 + BigQuery + Brand Campaign Tracker",
+    "special_features": ["AR 모드 (실제 환경 스캔)", "소셜 챌린지", "기부 연동 API"]
+  },
+  "common_modules": {
+    "brand_campaign_framework": {
+      "description": "브랜드 캠페인 통합 프레임워크",
+      "features": ["캠페인 스케줄링", "브랜딩 커스터마이징", "효과 측정", "리포팅"]
+    },
+    "donation_integration": {
+      "description": "실제 기부 연동 시스템",
+      "features": ["마일스톤 추적", "기부 API 연동", "투명성 리포트"]
+    },
+    "educational_content_system": {
+      "description": "교육 콘텐츠 관리 시스템",
+      "features": ["다국어 팩트 DB", "팁 스케줄링", "퀴즈 시스템"]
+    }
+  }
+}
