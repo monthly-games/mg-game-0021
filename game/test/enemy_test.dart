@@ -1,5 +1,4 @@
 import 'package:flame/extensions.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:game/core/game_state.dart';
 import 'package:game/features/enemies/pollution_blob.dart';

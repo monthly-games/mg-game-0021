@@ -30,7 +30,7 @@ void main() {
       final t3 = gridManager.getTileAt(1, 0)!..pollutionValue = 75;
 
       // Isolate them
-      gridManager.getTileAt(1, 1)!..pollutionValue = 10;
+      gridManager.getTileAt(1, 1)!.pollutionValue = 10;
 
       final matches = gridManager.checkMatch(0, 0);
 

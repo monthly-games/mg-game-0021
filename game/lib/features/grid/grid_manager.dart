@@ -80,7 +80,7 @@ class GridManager extends Component {
   }
 
   void _affectNeighbors(int cx, int cy, double amount) {
-    final dirs = [Point(0, 1), Point(0, -1), Point(1, 0), Point(-1, 0)];
+    final dirs = [const Point(0, 1), const Point(0, -1), const Point(1, 0), const Point(-1, 0)];
 
     for (final dir in dirs) {
       final nx = cx + dir.x;
@@ -113,8 +113,9 @@ class GridManager extends Component {
   // Puzzle Logic: Find connected tiles with similar pollution (> 50)
   List<PollutionTile> checkMatch(int startX, int startY) {
     final startTile = getTileAt(startX, startY);
-    if (startTile == null || startTile.pollutionValue < 30)
+    if (startTile == null || startTile.pollutionValue < 30) {
       return []; // Too clean to match
+    }
 
     List<PollutionTile> matches = [];
     Set<PollutionTile> visited = {};
@@ -125,7 +126,7 @@ class GridManager extends Component {
       final current = queue.removeAt(0);
       matches.add(current);
 
-      final dirs = [Point(0, 1), Point(0, -1), Point(1, 0), Point(-1, 0)];
+      final dirs = [const Point(0, 1), const Point(0, -1), const Point(1, 0), const Point(-1, 0)];
 
       for (final dir in dirs) {
         final nx = current.gridX + dir.x;

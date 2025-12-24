@@ -41,7 +41,7 @@ class MGCleanerHud extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(MGSpacing.sm),
+        padding: const EdgeInsets.all(MGSpacing.sm),
         child: Column(
           children: [
             // 상단 HUD
@@ -50,10 +50,10 @@ class MGCleanerHud extends StatelessWidget {
               children: [
                 // 왼쪽: 에너지 & 오염도
                 Expanded(child: _buildStatusPanel()),
-                SizedBox(width: MGSpacing.sm),
+                const SizedBox(width: MGSpacing.sm),
                 // 중앙: 웨이브 정보
                 _buildWaveInfo(),
-                SizedBox(width: MGSpacing.sm),
+                const SizedBox(width: MGSpacing.sm),
                 // 오른쪽: 일시정지
                 if (onPause != null)
                   MGIconButton(
@@ -79,7 +79,7 @@ class MGCleanerHud extends StatelessWidget {
 
   Widget _buildStatusPanel() {
     return Container(
-      padding: EdgeInsets.all(MGSpacing.xs),
+      padding: const EdgeInsets.all(MGSpacing.xs),
       decoration: BoxDecoration(
         color: MGColors.surface.withOpacity(0.85),
         borderRadius: BorderRadius.circular(MGSpacing.sm),
@@ -91,8 +91,8 @@ class MGCleanerHud extends StatelessWidget {
           // 에너지
           Row(
             children: [
-              Icon(Icons.bolt, color: Colors.yellow, size: 16),
-              SizedBox(width: MGSpacing.xs),
+              const Icon(Icons.bolt, color: Colors.yellow, size: 16),
+              const SizedBox(width: MGSpacing.xs),
               Text(
                 'Energy: $energy',
                 style: MGTextStyles.buttonSmall.copyWith(
@@ -102,12 +102,12 @@ class MGCleanerHud extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: MGSpacing.xs),
+          const SizedBox(height: MGSpacing.xs),
           // 오염도
           Row(
             children: [
-              Icon(Icons.warning_amber, color: Colors.purple, size: 16),
-              SizedBox(width: MGSpacing.xs),
+              const Icon(Icons.warning_amber, color: Colors.purple, size: 16),
+              const SizedBox(width: MGSpacing.xs),
               Expanded(
                 child: MGLinearProgress(
                   value: pollutionLevel,
@@ -116,7 +116,7 @@ class MGCleanerHud extends StatelessWidget {
                   progressColor: _getPollutionColor(),
                 ),
               ),
-              SizedBox(width: MGSpacing.xs),
+              const SizedBox(width: MGSpacing.xs),
               Text(
                 '${(pollutionLevel * 100).toInt()}%',
                 style: MGTextStyles.caption.copyWith(
@@ -140,7 +140,7 @@ class MGCleanerHud extends StatelessWidget {
 
   Widget _buildWaveInfo() {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: MGSpacing.md,
         vertical: MGSpacing.xs,
       ),
@@ -177,7 +177,7 @@ class MGCleanerHud extends StatelessWidget {
 
   Widget _buildCleanerSelection() {
     return Container(
-      padding: EdgeInsets.all(MGSpacing.sm),
+      padding: const EdgeInsets.all(MGSpacing.sm),
       decoration: BoxDecoration(
         color: MGColors.surface.withOpacity(0.9),
         borderRadius: BorderRadius.circular(MGSpacing.sm),
@@ -192,7 +192,7 @@ class MGCleanerHud extends StatelessWidget {
           return GestureDetector(
             onTap: canAfford ? () => onSelectCleaner?.call(option.type) : null,
             child: Container(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: MGSpacing.md,
                 vertical: MGSpacing.sm,
               ),
@@ -220,7 +220,7 @@ class MGCleanerHud extends StatelessWidget {
                     color: canAfford ? option.color : Colors.grey,
                     size: 28,
                   ),
-                  SizedBox(height: MGSpacing.xxs),
+                  const SizedBox(height: MGSpacing.xxs),
                   Text(
                     option.name,
                     style: MGTextStyles.buttonSmall.copyWith(
@@ -245,7 +245,7 @@ class MGCleanerHud extends StatelessWidget {
 
   Widget _buildStageClearPanel() {
     return Container(
-      padding: EdgeInsets.all(MGSpacing.lg),
+      padding: const EdgeInsets.all(MGSpacing.lg),
       decoration: BoxDecoration(
         color: Colors.green.withOpacity(0.9),
         borderRadius: BorderRadius.circular(MGSpacing.md),
@@ -261,8 +261,8 @@ class MGCleanerHud extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.check_circle, color: Colors.white, size: 48),
-          SizedBox(height: MGSpacing.sm),
+          const Icon(Icons.check_circle, color: Colors.white, size: 48),
+          const SizedBox(height: MGSpacing.sm),
           Text(
             'STAGE CLEARED!',
             style: MGTextStyles.h2.copyWith(
@@ -270,7 +270,7 @@ class MGCleanerHud extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: MGSpacing.md),
+          const SizedBox(height: MGSpacing.md),
           if (onNextStage != null)
             ElevatedButton(
               onPressed: onNextStage,
@@ -278,7 +278,7 @@ class MGCleanerHud extends StatelessWidget {
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.green,
               ),
-              child: Text('Next Region'),
+              child: const Text('Next Region'),
             ),
         ],
       ),
@@ -287,7 +287,7 @@ class MGCleanerHud extends StatelessWidget {
 
   Widget _buildGameOverPanel() {
     return Container(
-      padding: EdgeInsets.all(MGSpacing.lg),
+      padding: const EdgeInsets.all(MGSpacing.lg),
       decoration: BoxDecoration(
         color: Colors.red.withOpacity(0.9),
         borderRadius: BorderRadius.circular(MGSpacing.md),
@@ -296,8 +296,8 @@ class MGCleanerHud extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.warning, color: Colors.white, size: 48),
-          SizedBox(height: MGSpacing.sm),
+          const Icon(Icons.warning, color: Colors.white, size: 48),
+          const SizedBox(height: MGSpacing.sm),
           Text(
             'POLLUTION CRITICAL',
             style: MGTextStyles.h2.copyWith(

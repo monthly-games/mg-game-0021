@@ -1,8 +1,6 @@
-import 'dart:math';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import '../grid/grid_manager.dart';
-import '../cleaners/cleaner_entity.dart';
 import '../cleaners/defender_cleaner.dart';
 
 class PollutionBlob extends PositionComponent {

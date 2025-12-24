@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:game/core/game_state.dart';
 import 'package:game/features/cleaners/defender_cleaner.dart';
-import 'package:game/features/enemies/pollution_blob.dart';
 import 'package:game/features/grid/grid_manager.dart';
 import 'package:game/features/stages/stage_data.dart';
 
