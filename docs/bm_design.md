@@ -1,7 +1,13 @@
-# 오염도 제로: 클리너 브리게이드 - BM 설계 문서
+﻿# 오염도 제로: 클리너 브리게이드 - BM 설계 문서
 
 > game_id: game_0021
 > repo: mg-game-0021
+> title_kr: 오염도 제로: 클리너 브리게이드
+> title_en: Pollution Zero: Cleaner Brigade
+> genre_tags: puzzle, defense, eco, casual
+> doc_type: bm_design
+> source_of_truth: docs/design/gdd_game_0021.json
+> last_updated: 2025-12-19
 
 ---
 
