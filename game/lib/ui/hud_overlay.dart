@@ -81,7 +81,7 @@ class HudOverlay extends StatelessWidget {
                     if (gameState.isStageClear)
                       Center(
                         child: Card(
-                          color: Colors.green.withOpacity(0.9),
+                          color: Colors.green.withValues(alpha: 0.9),
                           child: Padding(
                             padding: const EdgeInsets.all(20),
                             child: Column(

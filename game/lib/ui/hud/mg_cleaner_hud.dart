@@ -81,7 +81,7 @@ class MGCleanerHud extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MGSpacing.xs),
       decoration: BoxDecoration(
-        color: MGColors.surface.withOpacity(0.85),
+        color: MGColors.surface.withValues(alpha: 0.85),
         borderRadius: BorderRadius.circular(MGSpacing.sm),
         border: Border.all(color: MGColors.border),
       ),
@@ -112,7 +112,7 @@ class MGCleanerHud extends StatelessWidget {
                 child: MGLinearProgress(
                   value: pollutionLevel,
                   height: 10,
-                  backgroundColor: Colors.purple.withOpacity(0.2),
+                  backgroundColor: Colors.purple.withValues(alpha: 0.2),
                   progressColor: _getPollutionColor(),
                 ),
               ),
@@ -147,8 +147,8 @@ class MGCleanerHud extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Colors.green.withOpacity(0.8),
-            Colors.teal.withOpacity(0.5),
+            Colors.green.withValues(alpha: 0.8),
+            Colors.teal.withValues(alpha: 0.5),
           ],
         ),
         borderRadius: BorderRadius.circular(MGSpacing.sm),
@@ -179,7 +179,7 @@ class MGCleanerHud extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MGSpacing.sm),
       decoration: BoxDecoration(
-        color: MGColors.surface.withOpacity(0.9),
+        color: MGColors.surface.withValues(alpha: 0.9),
         borderRadius: BorderRadius.circular(MGSpacing.sm),
         border: Border.all(color: MGColors.border),
       ),
@@ -198,10 +198,10 @@ class MGCleanerHud extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 color: isSelected
-                    ? option.color.withOpacity(0.3)
+                    ? option.color.withValues(alpha: 0.3)
                     : canAfford
                         ? MGColors.surface
-                        : Colors.grey.withOpacity(0.3),
+                        : Colors.grey.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(MGSpacing.sm),
                 border: Border.all(
                   color: isSelected
@@ -247,12 +247,12 @@ class MGCleanerHud extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MGSpacing.lg),
       decoration: BoxDecoration(
-        color: Colors.green.withOpacity(0.9),
+        color: Colors.green.withValues(alpha: 0.9),
         borderRadius: BorderRadius.circular(MGSpacing.md),
         border: Border.all(color: Colors.greenAccent, width: 2),
         boxShadow: [
           BoxShadow(
-            color: Colors.green.withOpacity(0.5),
+            color: Colors.green.withValues(alpha: 0.5),
             blurRadius: 20,
             spreadRadius: 4,
           ),
@@ -289,7 +289,7 @@ class MGCleanerHud extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MGSpacing.lg),
       decoration: BoxDecoration(
-        color: Colors.red.withOpacity(0.9),
+        color: Colors.red.withValues(alpha: 0.9),
         borderRadius: BorderRadius.circular(MGSpacing.md),
         border: Border.all(color: Colors.redAccent, width: 2),
       ),

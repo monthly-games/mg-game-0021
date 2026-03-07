@@ -42,7 +42,7 @@ class VfxManager {
               generator: (i) => ComputedParticle(
                 renderer: (canvas, particle) {
                   final paint = Paint()
-                    ..color = Colors.white.withOpacity(1 - particle.progress);
+                    ..color = Colors.white.withValues(alpha: 1 - particle.progress);
                   canvas.drawCircle(
                     Offset.zero,
                     (particle.progress * 10) + 2,
