@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../core/game_state.dart';
 import '../game/cleaner_game.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
 
 class HudOverlay extends StatelessWidget {
   final CleanerGame game;
@@ -28,7 +29,7 @@ class HudOverlay extends StatelessWidget {
                         Text(
                           'Energy: ${gameState.energy}',
                           style: const TextStyle(
-                            color: Colors.white,
+                            color: MGColors.textHighEmphasis,
                             fontSize: 18,
                           ),
                         ),
@@ -37,7 +38,7 @@ class HudOverlay extends StatelessWidget {
                           children: [
                             const Text(
                               'Pollution: ',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: MGColors.textHighEmphasis),
                             ),
                             Container(
                               width: 100,
@@ -51,7 +52,7 @@ class HudOverlay extends StatelessWidget {
                             ),
                             Text(
                               ' ${(gameState.pollutionLevel * 100).toInt()}%',
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: MGColors.textHighEmphasis),
                             ),
                           ],
                         ),
@@ -81,7 +82,7 @@ class HudOverlay extends StatelessWidget {
                     if (gameState.isStageClear)
                       Center(
                         child: Card(
-                          color: Colors.green.withValues(alpha: 0.9),
+                          color: MGColors.success.withValues(alpha: 0.9),
                           child: Padding(
                             padding: const EdgeInsets.all(20),
                             child: Column(
@@ -92,7 +93,7 @@ class HudOverlay extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                    color: MGColors.textHighEmphasis,
                                   ),
                                 ),
                                 const SizedBox(height: 20),
@@ -126,7 +127,7 @@ class HudOverlay extends StatelessWidget {
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: isSelected
                                       ? Colors.cyan
-                                      : Colors.grey,
+                                      : MGColors.common,
                                 ),
                                 child: Text(
                                   type == 'Defender'

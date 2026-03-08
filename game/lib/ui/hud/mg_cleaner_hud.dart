@@ -96,7 +96,7 @@ class MGCleanerHud extends StatelessWidget {
               Text(
                 'Energy: $energy',
                 style: MGTextStyles.buttonSmall.copyWith(
-                  color: Colors.white,
+                  color: MGColors.textHighEmphasis,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -132,8 +132,8 @@ class MGCleanerHud extends StatelessWidget {
   }
 
   Color _getPollutionColor() {
-    if (pollutionLevel > 0.8) return Colors.red;
-    if (pollutionLevel > 0.5) return Colors.orange;
+    if (pollutionLevel > 0.8) return MGColors.error;
+    if (pollutionLevel > 0.5) return MGColors.warning;
     if (pollutionLevel > 0.3) return Colors.yellow;
     return Colors.purple;
   }
@@ -147,7 +147,7 @@ class MGCleanerHud extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Colors.green.withValues(alpha: 0.8),
+            MGColors.success.withValues(alpha: 0.8),
             Colors.teal.withValues(alpha: 0.5),
           ],
         ),
@@ -166,7 +166,7 @@ class MGCleanerHud extends StatelessWidget {
           Text(
             '$wave / $maxWave',
             style: MGTextStyles.buttonMedium.copyWith(
-              color: Colors.white,
+              color: MGColors.textHighEmphasis,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -201,14 +201,14 @@ class MGCleanerHud extends StatelessWidget {
                     ? option.color.withValues(alpha: 0.3)
                     : canAfford
                         ? MGColors.surface
-                        : Colors.grey.withValues(alpha: 0.3),
+                        : MGColors.common.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(MGSpacing.sm),
                 border: Border.all(
                   color: isSelected
                       ? option.color
                       : canAfford
                           ? MGColors.border
-                          : Colors.grey,
+                          : MGColors.common,
                   width: isSelected ? 2 : 1,
                 ),
               ),
@@ -217,21 +217,21 @@ class MGCleanerHud extends StatelessWidget {
                 children: [
                   Icon(
                     option.icon,
-                    color: canAfford ? option.color : Colors.grey,
+                    color: canAfford ? option.color : MGColors.common,
                     size: 28,
                   ),
                   const SizedBox(height: MGSpacing.xxs),
                   Text(
                     option.name,
                     style: MGTextStyles.buttonSmall.copyWith(
-                      color: canAfford ? Colors.white : Colors.grey,
+                      color: canAfford ? MGColors.textHighEmphasis : MGColors.common,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     '${option.cost} E',
                     style: MGTextStyles.caption.copyWith(
-                      color: canAfford ? Colors.yellow : Colors.grey,
+                      color: canAfford ? Colors.yellow : MGColors.common,
                     ),
                   ),
                 ],
@@ -247,12 +247,12 @@ class MGCleanerHud extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MGSpacing.lg),
       decoration: BoxDecoration(
-        color: Colors.green.withValues(alpha: 0.9),
+        color: MGColors.success.withValues(alpha: 0.9),
         borderRadius: BorderRadius.circular(MGSpacing.md),
         border: Border.all(color: Colors.greenAccent, width: 2),
         boxShadow: [
           BoxShadow(
-            color: Colors.green.withValues(alpha: 0.5),
+            color: MGColors.success.withValues(alpha: 0.5),
             blurRadius: 20,
             spreadRadius: 4,
           ),
@@ -261,12 +261,12 @@ class MGCleanerHud extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.check_circle, color: Colors.white, size: 48),
+          const Icon(Icons.check_circle, color: MGColors.textHighEmphasis, size: 48),
           const SizedBox(height: MGSpacing.sm),
           Text(
             'STAGE CLEARED!',
             style: MGTextStyles.h2.copyWith(
-              color: Colors.white,
+              color: MGColors.textHighEmphasis,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -275,8 +275,8 @@ class MGCleanerHud extends StatelessWidget {
             ElevatedButton(
               onPressed: onNextStage,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.green,
+                backgroundColor: MGColors.textHighEmphasis,
+                foregroundColor: MGColors.success,
               ),
               child: const Text('Next Region'),
             ),
@@ -289,19 +289,19 @@ class MGCleanerHud extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MGSpacing.lg),
       decoration: BoxDecoration(
-        color: Colors.red.withValues(alpha: 0.9),
+        color: MGColors.error.withValues(alpha: 0.9),
         borderRadius: BorderRadius.circular(MGSpacing.md),
         border: Border.all(color: Colors.redAccent, width: 2),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.warning, color: Colors.white, size: 48),
+          const Icon(Icons.warning, color: MGColors.textHighEmphasis, size: 48),
           const SizedBox(height: MGSpacing.sm),
           Text(
             'POLLUTION CRITICAL',
             style: MGTextStyles.h2.copyWith(
-              color: Colors.white,
+              color: MGColors.textHighEmphasis,
               fontWeight: FontWeight.bold,
             ),
           ),

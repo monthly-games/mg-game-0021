@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
 
 class StageData {
   final String id;
@@ -36,7 +37,7 @@ class StageManager {
       name: 'Smog City',
       width: 8,
       height: 10,
-      themeColor: Colors.grey,
+      themeColor: MGColors.common,
       pollutionSpreadRate: 2.5, // Moderate
       initialPollutionDensity: 0.35,
     ),

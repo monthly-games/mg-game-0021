@@ -2,6 +2,7 @@ import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import '../grid/grid_manager.dart';
 import 'cleaner_base.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
 
 class DefenderCleaner extends PositionComponent implements CleanerBase {
   @override
@@ -39,7 +40,7 @@ class DefenderCleaner extends PositionComponent implements CleanerBase {
     final textPainter = TextPainter(
       text: TextSpan(
         text: 'SHIELD ($health)',
-        style: const TextStyle(color: Colors.white, fontSize: 10),
+        style: const TextStyle(color: MGColors.textHighEmphasis, fontSize: 10),
       ),
       textDirection: TextDirection.ltr,
     );

@@ -2,6 +2,7 @@ import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import '../grid/grid_manager.dart';
 import 'cleaner_base.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
 
 class CleanerEntity extends PositionComponent implements CleanerBase {
   @override
@@ -42,7 +43,7 @@ class CleanerEntity extends PositionComponent implements CleanerBase {
       text: const TextSpan(
         text: 'C',
         style: TextStyle(
-          color: Colors.white,
+          color: MGColors.textHighEmphasis,
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),

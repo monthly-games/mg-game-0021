@@ -17,6 +17,7 @@ import 'screens/daily_quest_screen.dart';
 import 'screens/achievement_screen.dart';
 import 'screens/battlepass_screen.dart';
 import 'screens/gacha_screen.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
 
 // ============================================================
 // Puzzle Defense — MG-0021 (Zero Pollution: Cleaner Brigade)
@@ -337,7 +338,7 @@ class _UpgradePanelState extends State<UpgradePanel> {
           const Text(
             'UPGRADES',
             style: TextStyle(
-              color: Colors.white,
+              color: MGColors.textHighEmphasis,
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -363,7 +364,7 @@ class _UpgradePanelState extends State<UpgradePanel> {
           IconButton(
             icon: const Icon(
               Icons.close,
-              color: Colors.white,
+              color: MGColors.textHighEmphasis,
             ),
             onPressed: () {
               widget.game.overlays.remove('upgrades');
@@ -423,7 +424,7 @@ class _UpgradePanelState extends State<UpgradePanel> {
                   Text(
                     upgrade.name,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: MGColors.textHighEmphasis,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                     ),
@@ -462,7 +463,7 @@ class _UpgradePanelState extends State<UpgradePanel> {
                   backgroundColor: canAfford
                       ? const Color(0xFF20B2AA)
                       : Colors.grey[700],
-                  foregroundColor: Colors.white,
+                  foregroundColor: MGColors.textHighEmphasis,
                   padding: const EdgeInsets.symmetric(
                     vertical: 8,
                   ),
@@ -508,7 +509,7 @@ class _UpgradePanelState extends State<UpgradePanel> {
       case 'Strategy':
         return Colors.purpleAccent;
       default:
-        return Colors.white;
+        return MGColors.textHighEmphasis;
     }
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
 
 class PollutionTile extends PositionComponent {
   final int gridX;
@@ -29,7 +30,7 @@ class PollutionTile extends PositionComponent {
           Colors.purple[900]!,
           pollutionValue / 100,
         ) ??
-        Colors.grey;
+        MGColors.common;
 
     canvas.drawRect(
       size.toRect().deflate(1.0), // Slight padding for grid look
