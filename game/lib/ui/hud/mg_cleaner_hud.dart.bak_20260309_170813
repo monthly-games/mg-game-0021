@@ -19,7 +19,6 @@ class MGCleanerHud extends StatelessWidget {
   final bool isGameOver;
   final VoidCallback? onPause;
   final VoidCallback? onNextStage;
-  final VoidCallback? onDailyHub;
   final Function(String)? onSelectCleaner;
 
   const MGCleanerHud({
@@ -36,7 +35,6 @@ class MGCleanerHud extends StatelessWidget {
     this.onPause,
     this.onNextStage,
     this.onSelectCleaner,
-    this.onDailyHub,
   });
 
   @override
@@ -57,13 +55,6 @@ class MGCleanerHud extends StatelessWidget {
                 _buildWaveInfo(),
                 const SizedBox(width: MGSpacing.sm),
                 // 오른쪽: 일시정지
-                if (onDailyHub != null)
-                  MGIconButton(
-                    icon: Icons.calendar_today,
-                    onPressed: onDailyHub!,
-                    buttonSize: MGIconButtonSize.small,
-                  ),
-                const SizedBox(width: MGSpacing.xs),
                 if (onPause != null)
                   MGIconButton(
                     icon: Icons.pause,
