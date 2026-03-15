@@ -24,10 +24,6 @@ void main() {
     });
 
     test('PollutionBlob moves towards center', () {
-      final center = Vector2(
-        (gridManager.width * 64.0) / 2,
-        (gridManager.height * 64.0) / 2,
-      );
 
       final blob = PollutionBlob(
         gridManager: gridManager,

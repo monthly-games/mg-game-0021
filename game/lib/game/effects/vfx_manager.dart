@@ -1,4 +1,5 @@
 /// VFX Manager for MG-0021 Zero Pollution (Cleaner Game)
+library;
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:mg_common_game/core/engine/effects/flame_effects.dart';

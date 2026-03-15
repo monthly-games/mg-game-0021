@@ -95,7 +95,7 @@ class MGCleanerHud extends StatelessWidget {
                   MGIconButton(
                     icon: Icons.pause,
                     onPressed: onPause!,
-                    size: MGIconButtonSize.small,
+                    buttonSize: MGIconButtonSize.small,
                   ),
               ],
             ),
@@ -149,7 +149,7 @@ class MGCleanerHud extends StatelessWidget {
                   value: pollutionLevel,
                   height: 10,
                   backgroundColor: Colors.purple.withValues(alpha: 0.2),
-                  progressColor: _getPollutionColor(),
+                  valueColor: _getPollutionColor(),
                 ),
               ),
               const SizedBox(width: MGSpacing.xs),

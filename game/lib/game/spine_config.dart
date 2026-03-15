@@ -14,7 +14,7 @@ const kCleanerLeaderMeta = SpineAssetMeta(
   atlasPath:
       'assets/spine/characters/cleaner_leader/cleaner_leader.atlas',
   skeletonPath:
-      'assets/spine/characters/cleaner_leader/cleaner_leader.skel',
+      'assets/spine/characters/cleaner_leader/cleaner_leader.json',
   animations: ['idle', 'walk', 'attack', 'hit'],
   defaultAnimation: 'idle',
   defaultMix: 0.2,
@@ -26,7 +26,7 @@ const kEcoDroneMeta = SpineAssetMeta(
   key: 'eco_drone',
   path: 'spine/characters/eco_drone',
   atlasPath: 'assets/spine/characters/eco_drone/eco_drone.atlas',
-  skeletonPath: 'assets/spine/characters/eco_drone/eco_drone.skel',
+  skeletonPath: 'assets/spine/characters/eco_drone/eco_drone.json',
   animations: ['idle', 'walk', 'attack', 'hit'],
   defaultAnimation: 'idle',
   defaultMix: 0.2,
@@ -40,7 +40,7 @@ const kRecycleBotMeta = SpineAssetMeta(
   atlasPath:
       'assets/spine/characters/recycle_bot/recycle_bot.atlas',
   skeletonPath:
-      'assets/spine/characters/recycle_bot/recycle_bot.skel',
+      'assets/spine/characters/recycle_bot/recycle_bot.json',
   animations: ['idle', 'walk', 'attack', 'hit'],
   defaultAnimation: 'idle',
   defaultMix: 0.2,

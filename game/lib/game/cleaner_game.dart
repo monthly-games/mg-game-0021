@@ -15,7 +15,7 @@ import '../features/enemies/wave_manager.dart';
 import '../features/stages/stage_data.dart';
 import '../features/vfx/vfx_manager.dart';
 
-class CleanerGame extends FlameGame with TapDetector {
+class CleanerGame extends FlameGame with TapCallbacks {
   final AudioManager audio = GetIt.I<AudioManager>();
   final GameState gameState = GameState();
   late GridManager gridManager;
@@ -103,19 +103,11 @@ class CleanerGame extends FlameGame with TapDetector {
   }
 
   @override
-  void onTapDown(TapDownInfo info) {
+  void onTapDown(TapDownEvent event) {
     if (gameState.isGameOver || gameState.isStageClear) return;
 
     // Convert screen coordinates to world coordinates
-    final worldPos = info
-        .eventPosition
-        .widget; // Assuming simple camera mapping or using proper conversion
-    // For simple FlameGame without complex CameraComponent usage in World, widget pos ~= world pos if zoom is 1 and anchor TopLeft
-    // But since we use CameraComponent in Flame 1.x usually, let's just use `info.eventPosition.global` or similar if attached to GameWidget
-
-    // In Flame 1.18+, we usually use world.screenToWorld or similar.
-    // Assuming default viewport/camera setup for this simple prototype.
-    // For cleaner_game extending FlameGame (which has a default world/camera in new versions), inputs are usually relative to viewport.
+    final worldPos = event.localPosition;
 
     // Simple Grid Mapping
     final int gx = (worldPos.x / PollutionTile.tileSize).floor();

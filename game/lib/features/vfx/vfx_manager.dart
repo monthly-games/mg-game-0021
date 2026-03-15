@@ -50,9 +50,7 @@ class VfxManager {
                   );
                 },
               ),
-            )
-            ..position =
-                position, // ComputedParticle doesn't move itself usually unless nested
+            ),
     );
     world.add(particle);
   }

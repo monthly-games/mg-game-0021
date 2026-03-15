@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'game_state.dart';
+import 'package:flutter/foundation.dart';
 
 class SaveManager {
   static const String _saveKey = 'game_save_data';
@@ -27,7 +28,7 @@ class SaveManager {
         state.fromJson(jsonMap);
         state.regenerateOfflineEnergy();
       } catch (e) {
-        print('Error loading save: $e');
+        debugPrint('Error loading save: $e');
       }
     }
   }
