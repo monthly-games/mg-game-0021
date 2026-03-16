@@ -12,6 +12,8 @@ import 'screens/achievement_screen.dart';
 import 'screens/battlepass_screen.dart';
 import 'screens/gacha_screen.dart';
 import 'screens/collection_screen.dart';
+import 'game/tutorial_config.dart';
+import 'game/balancing_config.dart';
 
 // ============================================================
 // Puzzle Defense — MG-0021 (Zero Pollution: Cleaner Brigade)
@@ -31,6 +33,29 @@ void main() async {
   final upgradeManager = GetIt.I<UpgradeManager>();
   await upgradeManager.loadUpgrades();
   _applyUpgradeEffects(upgradeManager);
+
+  // ── Tutorial & Balancing ──────────────────────────────────
+  if (!GetIt.I.isRegistered<TutorialManager>()) {
+    final tutorialManager = TutorialManager();
+    await tutorialManager.initialize();
+    tutorialManager.registerTutorial(
+      kOnboardingTutorial.id,
+      kOnboardingTutorial.steps,
+    );
+    GetIt.I.registerSingleton<TutorialManager>(tutorialManager);
+  }
+  if (!GetIt.I.isRegistered<BalancingManager>()) {
+    GetIt.I.registerSingleton<BalancingManager>(
+      BalancingManager(defaultConfig: kDefaultBalancingConfig),
+    );
+  }
+  // ── Q7 DI Fix: Missing Systems ──────────────────────────
+  if (!GetIt.I.isRegistered<BattlePassManager>()) {
+    GetIt.I.registerSingleton<BattlePassManager>(BattlePassManager());
+  }
+  if (!GetIt.I.isRegistered<GachaManager>()) {
+    GetIt.I.registerSingleton<GachaManager>(GachaManager());
+  }
 
   runApp(const CleanerApp());
 }
