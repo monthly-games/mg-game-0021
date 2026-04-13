@@ -1,0 +1,35 @@
+import 'package:mg_common_game/systems/tutorial/tutorial.dart';
+import 'package:mg_common_game/systems/tutorial/tutorial_data.dart';
+
+/// Tutorial configuration for MG-0021: Pollution Zero: Cleaner Brigade.
+///
+/// Placeholder tutorial steps -- replace with localized strings
+/// and add targetSelector for highlight positioning in production.
+final kOnboardingTutorial = TutorialConfig(
+  id: 'onboarding',
+  name: 'Pollution Zero: Cleaner Brigade Tutorial',
+  steps: [
+    TutorialStep(
+      id: 'grid',
+      title: '3개를 매치하세요',
+      description: '같은 색 타일 3개를 연결하여 제거합니다.',
+    ),
+    TutorialStep(
+      id: 'combo_area',
+      title: '콤보를 만드세요',
+      description: '연속 매치로 콤보 보너스를 획득하세요.',
+    ),
+    TutorialStep(
+      id: 'powerup',
+      title: '파워업을 사용하세요',
+      description: '특수 타일을 만들어 강력한 효과를 발동하세요.',
+    ),
+    TutorialStep(
+      id: 'goal_area',
+      title: '보드를 클리어하세요',
+      description: '목표를 달성하여 스테이지를 클리어하세요.',
+    ),
+  
+  ],
+  skippable: true,
+);
