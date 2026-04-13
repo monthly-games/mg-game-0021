@@ -1,7 +1,10 @@
+import 'package:mg_common_game/core/ui/layout/mg_spacing.dart';
+import 'package:mg_common_game/core/localization/localization.dart';
 import 'package:flutter/material.dart';
 import '../core/game_state.dart';
 import '../game/cleaner_game.dart';
-import 'package:mg_common_game/core/ui/theme/mg_colors.dart';
+import 'package:mg_common_game/core/ui/theme/mg_colors.dart';import 'package:mg_common_game/l10n/localization.dart';
+
 
 class HudOverlay extends StatelessWidget {
   final CleanerGame game;
@@ -13,7 +16,7 @@ class HudOverlay extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(MGSpacing.md),
         child: Column(
           children: [
             // Top Bar: Energy and Pollution
@@ -33,7 +36,7 @@ class HudOverlay extends StatelessWidget {
                             fontSize: 18,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: MGSpacing.xxs),
                         Row(
                           children: [
                             const Text(
@@ -84,7 +87,7 @@ class HudOverlay extends StatelessWidget {
                         child: Card(
                           color: MGColors.success.withValues(alpha: 0.9),
                           child: Padding(
-                            padding: const EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(MGSpacing.mdLg),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -96,10 +99,10 @@ class HudOverlay extends StatelessWidget {
                                     color: MGColors.textHighEmphasis,
                                   ),
                                 ),
-                                const SizedBox(height: 20),
+                                const SizedBox(height: MGSpacing.mdLg),
                                 ElevatedButton(
                                   onPressed: () => gameState.nextStage(),
-                                  child: const Text('Next Region'),
+                                  child: Text('ui_general_next_region'.tr),
                                 ),
                               ],
                             ),
@@ -111,7 +114,7 @@ class HudOverlay extends StatelessWidget {
                         !gameState.isGameOver &&
                         gameState.isPlacementMode)
                       Container(
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(MGSpacing.xs),
                         color: Colors.black54,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,

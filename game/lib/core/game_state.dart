@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:mg_common_game/core/localization/localization.dart';
 
 class GameState extends ChangeNotifier {
   // 0.0 means 0% pollution, 1.0 means 100% pollution (Game Over)

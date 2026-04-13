@@ -53,30 +53,30 @@ class ToolGachaAdapter extends ChangeNotifier {
   List<GachaItem> _generateItems() {
     return [
       // UR (0.6%)
-      const GachaItem(id: 'ur_cleaner_001', nameKr: '전설의 Tool', rarity: GachaRarity.ultraRare),
-      const GachaItem(id: 'ur_cleaner_002', nameKr: '신화의 Tool', rarity: GachaRarity.ultraRare),
+      GachaItem(id: 'ur_cleaner_001', nameKr: '전설의 Tool', rarity: GachaRarity.ultraRare),
+      GachaItem(id: 'ur_cleaner_002', nameKr: '신화의 Tool', rarity: GachaRarity.ultraRare),
       // SSR (2.4%)
-      const GachaItem(id: 'ssr_cleaner_001', nameKr: '영웅의 Tool', rarity: GachaRarity.superRare),
-      const GachaItem(id: 'ssr_cleaner_002', nameKr: '고대의 Tool', rarity: GachaRarity.superRare),
-      const GachaItem(id: 'ssr_cleaner_003', nameKr: '황금의 Tool', rarity: GachaRarity.superRare),
+      GachaItem(id: 'ssr_cleaner_001', nameKr: '영웅의 Tool', rarity: GachaRarity.superRare),
+      GachaItem(id: 'ssr_cleaner_002', nameKr: '고대의 Tool', rarity: GachaRarity.superRare),
+      GachaItem(id: 'ssr_cleaner_003', nameKr: '황금의 Tool', rarity: GachaRarity.superRare),
       // SR (12%)
-      const GachaItem(id: 'sr_cleaner_001', nameKr: '희귀한 Tool A', rarity: GachaRarity.superRare),
-      const GachaItem(id: 'sr_cleaner_002', nameKr: '희귀한 Tool B', rarity: GachaRarity.superRare),
-      const GachaItem(id: 'sr_cleaner_003', nameKr: '희귀한 Tool C', rarity: GachaRarity.superRare),
-      const GachaItem(id: 'sr_cleaner_004', nameKr: '희귀한 Tool D', rarity: GachaRarity.superRare),
+      GachaItem(id: 'sr_cleaner_001', nameKr: '희귀한 Tool A', rarity: GachaRarity.superRare),
+      GachaItem(id: 'sr_cleaner_002', nameKr: '희귀한 Tool B', rarity: GachaRarity.superRare),
+      GachaItem(id: 'sr_cleaner_003', nameKr: '희귀한 Tool C', rarity: GachaRarity.superRare),
+      GachaItem(id: 'sr_cleaner_004', nameKr: '희귀한 Tool D', rarity: GachaRarity.superRare),
       // R (35%)
-      const GachaItem(id: 'r_cleaner_001', nameKr: '우수한 Tool A', rarity: GachaRarity.rare),
-      const GachaItem(id: 'r_cleaner_002', nameKr: '우수한 Tool B', rarity: GachaRarity.rare),
-      const GachaItem(id: 'r_cleaner_003', nameKr: '우수한 Tool C', rarity: GachaRarity.rare),
-      const GachaItem(id: 'r_cleaner_004', nameKr: '우수한 Tool D', rarity: GachaRarity.rare),
-      const GachaItem(id: 'r_cleaner_005', nameKr: '우수한 Tool E', rarity: GachaRarity.rare),
+      GachaItem(id: 'r_cleaner_001', nameKr: '우수한 Tool A', rarity: GachaRarity.rare),
+      GachaItem(id: 'r_cleaner_002', nameKr: '우수한 Tool B', rarity: GachaRarity.rare),
+      GachaItem(id: 'r_cleaner_003', nameKr: '우수한 Tool C', rarity: GachaRarity.rare),
+      GachaItem(id: 'r_cleaner_004', nameKr: '우수한 Tool D', rarity: GachaRarity.rare),
+      GachaItem(id: 'r_cleaner_005', nameKr: '우수한 Tool E', rarity: GachaRarity.rare),
       // N (50%)
-      const GachaItem(id: 'n_cleaner_001', nameKr: '일반 Tool A', rarity: GachaRarity.normal),
-      const GachaItem(id: 'n_cleaner_002', nameKr: '일반 Tool B', rarity: GachaRarity.normal),
-      const GachaItem(id: 'n_cleaner_003', nameKr: '일반 Tool C', rarity: GachaRarity.normal),
-      const GachaItem(id: 'n_cleaner_004', nameKr: '일반 Tool D', rarity: GachaRarity.normal),
-      const GachaItem(id: 'n_cleaner_005', nameKr: '일반 Tool E', rarity: GachaRarity.normal),
-      const GachaItem(id: 'n_cleaner_006', nameKr: '일반 Tool F', rarity: GachaRarity.normal),
+      GachaItem(id: 'n_cleaner_001', nameKr: '일반 Tool A', rarity: GachaRarity.normal),
+      GachaItem(id: 'n_cleaner_002', nameKr: '일반 Tool B', rarity: GachaRarity.normal),
+      GachaItem(id: 'n_cleaner_003', nameKr: '일반 Tool C', rarity: GachaRarity.normal),
+      GachaItem(id: 'n_cleaner_004', nameKr: '일반 Tool D', rarity: GachaRarity.normal),
+      GachaItem(id: 'n_cleaner_005', nameKr: '일반 Tool E', rarity: GachaRarity.normal),
+      GachaItem(id: 'n_cleaner_006', nameKr: '일반 Tool F', rarity: GachaRarity.normal),
     ];
   }
 
