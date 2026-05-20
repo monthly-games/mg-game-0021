@@ -27,8 +27,6 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Делите помоћу"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Делите помоћу апликације <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Скупи"</string>
-    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Лозинка"</string>
-    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Приступни кôд"</string>
     <string msgid="881409763997275156" name="call_notification_answer_action">"Одговори"</string>
     <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Видео"</string>
     <string msgid="3229508546291798546" name="call_notification_decline_action">"Одбиј"</string>
@@ -71,7 +69,7 @@
     <string name="offline_dialog_text">Хвала вам на интересовању.\nПоделићемо више информација када поново будете онлајн.</string>
     <string name="offline_notification_title">Поново сте онлајн! Хајде да наставимо тамо где смо стали</string>
     <string name="offline_notification_title_with_advertiser">Поново сте онлајн! Сазнајте више о оглашивачу: %s</string>
-    <string name="offline_opt_in_confirm">Важи</string>
+    <string name="offline_opt_in_confirm">Потврди</string>
     <string name="offline_opt_in_decline">Не, хвала</string>
     <string name="offline_opt_in_message">Послаћемо вам обавештење са линком до сајта оглашавача.</string>
     <string name="offline_opt_in_title">Отворите оглас кад поново будете онлајн.</string>
